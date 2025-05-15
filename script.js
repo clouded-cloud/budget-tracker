@@ -15,12 +15,12 @@ let income = 0;
 let expenses = 0;
 let balance = 0;
 
-// Update UI
-function updateBalanceUI() {
-    balanceList.innerHTML = `
-        <li>Total Income: ksh${income}</li>
-        <li>Total Expenses: ksh${expenses}</li>
-        <li>Balance: ksh${income - expenses}</li>
+function updateBalanceDisplay() {
+    const balance = totalIncome - totalExpenses;
+    balanceTable.innerHTML = `
+        <li>Total Income: $${totalIncome.toFixed(2)}</li>
+        <li>Total Expenses: $${totalExpenses.toFixed(2)}</li>
+        <li>Balance: $${balance.toFixed(2)}</li>
     `;
 }
 
