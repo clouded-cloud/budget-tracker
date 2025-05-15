@@ -91,7 +91,7 @@ button.submit:hover {
 
 
 .delete-btn {
-    background-color: #cc1c09;
+    background-color:  #cc1c09;
     color: white;
     padding: 6px 10px;
     border: none;
@@ -101,5 +101,6 @@ button.submit:hover {
 }
 
 .delete-btn:hover {
-    background-color: #cc1c09;
+    background-color:  #cc1c09;
 }
+ 
