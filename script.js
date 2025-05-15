@@ -2,12 +2,13 @@
 
 
 // Selecting Elements
-const totalAmount = document.getElementById("total-amount");
-const userAmount = document.getElementById("user-amount");
-const productTitle = document.getElementById("product-title");
-const addIncomeBtn = document.getElementById("total-amount-button");
-const addExpenseBtn = document.getElementById("add-expenses");
-const balanceList = document.querySelector("#user-balance-table ul");
+
+const totalAmountInput = document.getElementById("total-amount");
+const totalAmountButton = document.getElementById("total-amount-button");
+const productTitleInput = document.getElementById("product-title");
+const userAmountInput = document.getElementById("user-amount");
+const addExpensesButton = document.getElementById("add-expenses");
+const balanceTable = document.getElementById("user-balance-table").querySelector("ul");
 const expensesTableBody = document.querySelector("#expenses-table tbody");
 
 // State
