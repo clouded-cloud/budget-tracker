@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1>
+        BT-CONTROL
+    </h1>
+     
+         <div class="wrapper">
+            <div class="container-grid">
+                <div class="subcontainer">
+
+
+           <div class="total-amount-container">
+            <h3>INCOME</h3>
+
+            <input type="number" class="totalamount"id="total-amount" placeholder="Enter total Amount"/>
+            <button class="submit"id="total-amount-button">Add Income</button>
+           </div>
+
+            <div class="user-amount-container">
+                <h3>EXPENSES</h3>
+                <input type="text" class="product-title" id="product-title" placeholder="Enter title of product"/>
+                <input type="number" class ="user-amount" id="user-amount"placeholder="enter cost of production"/>
+
+                <button class="submit"id="add-expenses">Add expenses</button>
+                
+            </div>
+
+            <section>
+                <div id="user-balance-table">
+                <ul>
+                    <li>total income</li>
+                    <li>total expenses</li>
+                    <li>balance</li>
+                </ul>
+                </div>
+            </section>
+
+            
+                 <div id="expenses-table">
+                    <table>
+                            <thead>
+                                <tr>
+                                    <th>product-title </th>
+                                     <th>user-amount</th>
+                                  
+                                </tr>
+                            </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                    </div>
+
+                    </div>
+                  </div>
+                 </div>
+            <section>
+
+            </section>
+
+       <script src="script.js"></script>
+</body>
+</html>
