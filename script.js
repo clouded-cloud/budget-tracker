@@ -36,25 +36,39 @@ addIncomeBtn.addEventListener("click", () => {
     }
 });
 
-// Add Expense
-addExpenseBtn.addEventListener("click", () => {
-    const title = productTitle.value.trim();
-    const cost = parseFloat(userAmount.value);
 
-    if (title && !isNaN(cost) && cost > 0) {
-        expenses += cost;
-        const row = expensesTableBody.insertRow();
-        row.innerHTML = `<td>${title}</td><td>ksh${cost.toFixed(2)}</td>`;
-             
+// Add expense
+addExpensesButton.addEventListener("click", () => {
+    const title = productTitleInput.value.trim();
+    const amount = parseFloat(userAmountInput.value);
 
-        productTitle.value = "";
-        userAmount.value = "";
-        updateBalanceUI();
-    } else {
-        alert("Enter valid product title and amount.");
+    if (!title || isNaN(amount) || amount <= 0) {
+        alert("Please enter a valid product title and amount.");
+        return;
     }
+
+    // Add to total expenses
+    totalExpenses += amount;
+    updateBalanceDisplay();
+
+    // Create new expense row
+    const row = document.createElement("tr");
+    row.innerHTML = `
+        <td>${title}</td>
+        <td>$${amount.toFixed(2)}</td>
+        <td><button class="delete-btn">Delete</button></td>
+    `;
+
+    // Add delete functionality
+    row.querySelector(".delete-btn").addEventListener("click", () => {
+        totalExpenses -= amount;
+        updateBalanceDisplay();
+        row.remove();
+    });
+
+    expensesTableBody.appendChild(row);
+
+    // Clear inputs
+    productTitleInput.value = "";
+    userAmountInput.value = "";
 });
-
-// Initialize UI
-updateBalanceUI()
-
