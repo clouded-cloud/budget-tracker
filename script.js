@@ -18,9 +18,9 @@ let totalExpenses = 0;
 function updateBalanceDisplay() {
     const balance = totalIncome - totalExpenses;
     balanceTable.innerHTML = `
-        <li>Total Income: $${totalIncome.toFixed(2)}</li>
-        <li>Total Expenses: $${totalExpenses.toFixed(2)}</li>
-        <li>Balance: $${balance.toFixed(2)}</li>
+        <li>Total Income: ksh${totalIncome.toFixed(2)}</li>
+        <li>Total Expenses: ksh${totalExpenses.toFixed(2)}</li>
+        <li>Balance: ksh${balance.toFixed(2)}</li>
     `;
 }
 
