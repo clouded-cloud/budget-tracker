@@ -24,17 +24,19 @@ function updateBalanceDisplay() {
     `;
 }
 
-// Add Income
-addIncomeBtn.addEventListener("click", () => {
-    const value = parseFloat(totalAmount.value);
-    if (!isNaN(value) && value > 0) {
-        income += value;
-        totalAmount.value = "";
-        updateBalanceUI();
+
+// Add income
+totalAmountButton.addEventListener("click", () => {
+    const income = parseFloat(totalAmountInput.value);
+    if (!isNaN(income) && income > 0) {
+        totalIncome += income;
+        updateBalanceDisplay();
+        totalAmountInput.value = "";
     } else {
-        alert("Enter a valid income amount.");
+        alert("Please enter a valid income amount.");
     }
 });
+
 
 
 // Add expense
