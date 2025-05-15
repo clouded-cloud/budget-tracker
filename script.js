@@ -11,9 +11,8 @@ const balanceList = document.querySelector("#user-balance-table ul");
 const expensesTableBody = document.querySelector("#expenses-table tbody");
 
 // State
-let income = 0;
-let expenses = 0;
-let balance = 0;
+let totalIncome = 0;
+let totalExpenses = 0;
 
 function updateBalanceDisplay() {
     const balance = totalIncome - totalExpenses;
